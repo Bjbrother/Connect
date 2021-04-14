@@ -1,0 +1,137 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: 0;
+}
+
+.posts {
+  border: 1px solid rgb(125 149 162 / 83%);
+  padding: 18px 20px;
+  width: 100%;
+}
+
+.Name {
+  cursor: pointer;
+  /* display: block; */
+  text-decoration: none;
+  color: grey;
+  /* border: 2px solid black; */
+
+  /* width: 100px; */
+  /* margin: auto; */
+  /* padding: 8px 21px; */
+  /* border-radius: 30px; */
+  font-size: 16px;
+}
+
+.post-group {
+  border: 2px solid #cdd0de03;
+    background-color: #cecece33;
+    padding: 20px 27px;
+    margin: 9px 0px;
+    border-radius: 13px;
+    box-shadow: 2px 3px 7px 2px #888888;
+}
+
+.title {
+  font-family: "Poppins", sans-serif;
+  display: inline;
+  font-size: 24px;
+}
+
+.stories {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 450;
+  line-height: 20px;
+}
+
+.time {
+  display: block;
+  color: grey;
+}
+
+.readmore {
+  display: flex;
+  flex-flow: row-reverse;
+  color: grey;
+  cursor: pointer;
+}
+
+.btn {
+  padding: 7px 23px;
+  font-size: 16px;
+  width: 98px;
+  border: 1px solid #0a0505;
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 4px;
+  margin-top: 9px;
+}
+
+.btn:hover {
+  background-color: #506766ed;
+  color: white;
+}
+
+#update
+{
+  color: grey;
+  list-style: none;
+  text-decoration:none ;
+  
+}
+
+#delete
+{
+  color: grey;
+  list-style: none;
+  text-decoration:none ;
+  position: absolute;
+  right: 35px;
+}
+
+#like
+{
+  list-style:none;
+}
+
+.read
+{
+  color: #273332c9;
+  position: absolute;
+  right: 70px;
+  font-size: 16px;
+  display: inline-block;
+  cursor: pointer;
+}
+
+#update:hover{
+  background-color: #237cb3d9;
+  color: white;
+  
+}
+
+#delete:hover{
+  background-color: red;
+  color: white;
+  list-style: none;
+}
+
+.read:hover{
+  color: grey;
+  text-decoration: none;
+}
+
+#bookmark,#bookmarked {
+  padding: 6px 11px;
+  font-size: 15px;
+  width: 99px;
+  border: 1px solid #0a050561;
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 0px;
+  margin-top: 15px;
+  list-style: none;
+  text-decoration: none;
+}

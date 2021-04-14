@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Write</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="../static/css/edit_profile.css" />
+  </head>
+  <body>
+    <nav id="navbar">
+      <div class="logo">
+        <p>C</p>
+      </div>
+
+      <ul>
+        <li class="item">
+          <a href="/home">Home</a>
+        </li>
+        <li class="item">
+          <a href="/profile">Profile</a>
+        </li>
+        <li class="item">
+          <a href="/about">About us</a>
+        </li>
+        <li class="item">
+          <input type="text" name="search" placeholder="Search Connect.." />
+        </li>
+        <li class="item">
+          <a href="/">Sign out</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="write-post">
+      <form id="writepost" method="post" onsubmit="return ValidatePostsubmit()">
+        <label for="Heading">
+          <input  type="text"  onchange="return validateHead()" class="form-control" name="heading"  placeholder="Title" autocomplete="off"   id="heading"/>
+          <input type="text" onchange="return validateTopic()"  class="form-control"  name="topic" placeholder="Topic"  autocomplete="off"  id="topic"/>
+          <textarea class="form-control" onchange=" return validateStory()" name="story" placeholder="Tell your story" rows="10" cols="30" autocomplete="off" id="story"></textarea></label><br />
+        <input id="btn" type="submit" name="submit" value="Publish" />
+        <input type="reset" id="btn1" name="reset" value="Clear" />
+      </form>
+    </div>
+    <footer>
+      <p class="center foot">
+        Copyrights &copy; www.Connect.com All rights are reserved!
+      </p>
+    </footer>
+
+    <script type="text/javascript" src="../static/script/validate.js"></script>
+  </body>
+</html>

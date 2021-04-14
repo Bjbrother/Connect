@@ -1,0 +1,33 @@
+
+head
+  title signup
+  link(rel='stylesheet' type='text/css' href='../static/css/sign.css')
+  link(rel='stylesheet' type='text/css' href='../static/css/style.css')
+nav#navbar
+  .logo
+    p C
+  ul
+    li.item
+      a(href='/about') About us
+    li.item
+      a(href='#') Contact us
+    li.item
+      input(type='text' name='search' placeholder='Search Connect..')
+    li.item
+      a(href='/users/signin') Sign in
+#alertup.alert
+  span.closebtn(onclick="this.parentElement.style.display='none';") &times;
+  label#errormsg
+#signup.sign-in
+  form(method='POST' onsubmit='return validationup()')
+    input#name(type='text' name='name' value = name placeholder='Name' autocomplete='off')
+    input#username(type='text' name='username' value = username placeholder='Username' autocomplete='off')
+    p#err #{error}
+    input#password(type='password' name='password' value=password autocomplete='off' placeholder='Password')
+    input#repassword(type='password' name='repassword' autocomplete='off' placeholder='Re-enter Password')
+    input(type='text' name='bio'  placeholder='Write short bio')
+    input#btn(type='submit' name='' value='Create' style='margin-left: 100px')
+footer
+  p.center.foot
+    | Copyrights &copy; www.Connect.com All rights are reserved!
+script(type='text/javascript' src='../static/script/validate.js')

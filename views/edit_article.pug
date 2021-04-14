@@ -1,0 +1,31 @@
+doctype html
+head
+    link(rel='stylesheet' type='text/css' href='../../static/css/style.css')
+    link(rel='stylesheet' type='text/css' href='../../static/css/edit_profile.css')
+nav#navbar
+    .logo
+        p C
+    ul
+        li.item
+            a(href='/home') Home
+        li.item
+            a(href='/profile') Profile
+        li.item
+            a(href='/about') About us
+        li.item
+            input(type='text' name='search' placeholder='Search Connect..')
+        li.item
+            a(href='/') Sign out
+.write-post
+    form#writepost(method='post' action='/article/edit/'+article._id onsubmit='return ValidatePostsubmit()')
+        label(for='Heading')
+        input#heading.form-control(type='text' onchange='return validateHead()' value=article.heading name='heading' placeholder='Title'  autocomplete='off')
+        input#topic.form-control(type='text' onchange='return validateTopic()' name='topic' value=article.topic placeholder='Topic' autocomplete='off')
+        textarea#story.form-control(onchange=' return validateStory()' name='story'  placeholder='Tell your story' rows='10' cols='30' autocomplete='off')= article.story
+        br
+        input#btn(type='submit' name='submit' value='Publish')
+        input#btn1(type='reset' name='reset' value='Clear')
+footer
+    p.center.foot
+        | Copyrights &copy; www.Connect.com All rights are reserved!
+script(type='text/javascript' src='../../static/script/validate.js')

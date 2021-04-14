@@ -1,0 +1,48 @@
+head
+  title Profile
+  base(href="/")
+  link(rel='stylesheet' type="text/css" href='../static/css/style.css')
+  link(rel='stylesheet' type="text/css"  href='../static/css/profile.css')
+  link(rel='stylesheet' type="text/css" href='../static/css/posts.css')
+nav#navbar
+  .logo
+    p C
+  ul
+    if user
+      li.item 
+        a(href="/home") Home
+      li.item
+        a(href='/article/write') Write
+      li.item
+        a(href='/users/logout') Sign out
+    else
+      li.item
+        a(href='/about') About us
+      li.item
+        a(href='/users/signin') Sign in
+      li.item 
+        a(href='/users/signup') Sign Up
+
+.profile
+  h3 #{usr.name}
+  img.img-circular(src='../static/images/profile.jpg' alt='profile' width='300px' height='')
+  if flag
+    a.editp(href='/users/edit/'+usr.username) Edit Profile
+  br
+  label.bio(for='short-bio') #{usr.bio}
+  br
+  a.readlist(href='/users/readinglist') Reading List
+if user 
+  #posts.posts
+    each pst,j in article
+      .post-group
+        .title #{pst.heading}
+        h4
+          a.Name(href='/users/profile/'+ pst.author) #{pst.author}
+          i &nbsp;in&nbsp;
+          strong.Name #{pst.topic}
+        p.stories  #{pst.story}
+        a.read(href="/article/"+pst._id) Read More
+footer
+  p.center.foot
+    | Copyrights &copy; www.Connect.com All rights are reserved!

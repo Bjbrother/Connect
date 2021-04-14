@@ -1,0 +1,33 @@
+doctype html
+head
+  title Edit Profile
+  base(href="/")
+  link(rel='stylesheet' type='text/css' href='../static/css/style.css')
+  link(rel='stylesheet' type='text/css' href='../static/css/edit_profile.css')
+nav#navbar
+  .logo
+    p C
+  ul
+    li.item
+      a(href='/home') Home
+    li.item
+      a(href='/profile') Profile
+    li.item
+      a(href='/write') Write
+    li.item
+      input(type='text' name='search' placeholder='Search Connect..')
+    li.item
+      a(href='/') Sign out
+.edit-group
+  form(action=('/users/edit/'+user.username) method='post')
+    input#editname(type='text' name='name' value= usr.name placeholder='Edit your name' autocomplete='off')
+    label#namecheck
+    input#editbio(type='text' name='bio' value = usr.bio placeholder='Edit your short bio' autocomplete='off')
+    label#biocheck
+    input#btn(type='submit' name='' value='Update')
+    a(href='/profile') Cancel
+footer
+  p.center.foot
+    | Copyrights &copy; www.Connect.com All rights are reserved!
+script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js')
+script(src='../static/script/edit.js')

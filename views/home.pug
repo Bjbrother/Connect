@@ -1,0 +1,50 @@
+doctype html
+head
+  link(rel='stylesheet' type='text/css' href='../static/css/style.css')
+  link(rel='stylesheet' type='text/css' href='../static/css/posts.css')
+  
+  title Connect
+nav#navbar
+  .logo
+    p C
+  ul
+    if user
+      li.item
+        a(href='/users/profile/'+user.username) #{user.name}
+      li.item
+        a(href='/article/write') Write
+      li.item
+        a(href='/users/logout') Sign out
+    else
+      li.item
+        a(href='/about') About us
+      li.item
+        a(href='/users/signin') Sign in
+      li.item 
+        a(href='/users/signup') Sign Up
+      
+    li.item
+      input(type='text' name='search' placeholder='Search Connect..')
+if user 
+  #posts.posts
+    each pst,j in article
+      .post-group
+        .title #{pst.heading}
+        - function shorten(s) { return (s.substr(0,300)+"...");};
+        h4
+          a.Name(href='/users/profile/'+ pst.author) #{pst.author}
+          i &nbsp;in&nbsp;
+          strong.Name #{pst.topic}
+          - story = pst.story
+        p.stories  #{shorten(story)}
+        //- if user.username == pst.author
+        a.read(href="/article/"+pst._id) Read More
+          //- a.btn#update(href="/article/edit/"+pst._id) Update
+          //- a.btn#delete(href="#",data-id=pst._id) Delete
+footer
+  p.center.foot
+    | Copyrights &copy; www.Connect.com All rights are reserved!
+
+script(type='text/javascript' src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js")
+script(type='text/javascript' src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js")
+script(type='text/javascript' src='../static/script/delete.js')

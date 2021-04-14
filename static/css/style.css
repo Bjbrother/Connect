@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: 0;
+  }
+
+  
+  .logo p {
+    text-shadow: rgb(148, 147, 150) 0px 0px 0px, rgb(154, 153, 156) 1px 1px 0px,
+      rgb(160, 158, 161) 2px 2px 0px, rgb(166, 164, 167) 3px 3px 0px,
+      rgb(172, 170, 173) 4px 4px 0px, rgb(177, 176, 179) 5px 5px 0px,
+      rgb(183, 181, 185) 6px 6px 0px, rgb(189, 187, 191) 7px 7px 0px,
+      rgb(195, 193, 196) 8px 8px 0px, rgb(200, 199, 202) 9px 9px 0px,
+      rgb(206, 204, 208) 10px 10px 0px;
+    font-size: 45px;
+    color: rgb(0 0 0);
+    height: 57px;
+    width: 57px;
+    margin: 2px 31px;
+    line-height: 57px;
+    border-radius: 18%;
+    text-align: center;
+    background-color: rgb(212, 210, 214);
+  }
+  
+  #navbar {
+    display: flex;
+    align-items: center;
+    position: relative;
+    height: 96px;
+  }
+  
+  #navbar::before {
+    content: "";
+    background-color: #375b71d9;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+  }
+  
+  #navbar ul {
+    display: flex;
+  }
+  
+  #navbar input {
+    padding-left: 11px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    border-radius: 11px;
+    margin-top: 4px;
+    position: absolute;
+    right: 73px;
+    font-size: 16px;
+    border: 1px;
+  }
+  
+  #navbar ul li {
+    list-style: none;
+    font-size: 1.3rem;
+  }
+  
+  #navbar ul li a {
+    text-decoration: none;
+    display: block;
+    padding: 3px 22px;
+    border-radius: 10px;
+    color: white;
+  }
+  
+  #navbar ul li a:hover {
+    color: white;
+  }
+  
+  #home p {
+    font-size: 2rem;
+    font-family: "Montserrat", sans-serif;
+  }
+  
+  #link {
+    display: block;
+    text-decoration: none;
+    color: black;
+    border: 2px solid black;
+    width: 100px;
+    margin: auto;
+    padding: 8px 21px;
+    border-radius: 30px;
+    font-size: 16px;
+  }
+  
+  #link:hover {
+    color: white;
+    background-color: black;
+  }
+  
+  .foot {
+    display: block;
+    padding: 9px 20px;
+    position: fixed;
+    bottom: 1px;
+    margin: auto;
+    width: 100%;
+    background-color: lightgrey;
+  }
+  
+  .h-primary {
+    font-size: 3.5rem;
+    padding: 12px;
+  }
+  
+  .center {
+    text-align: center;
+  }
+  

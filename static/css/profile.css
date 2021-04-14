@@ -1,0 +1,90 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.img-circular {
+  width: 100px;
+  height: 100px;
+  background-size: cover;
+  display: inline-block;
+  border-radius: 100px;
+  -webkit-border-radius: 100px;
+  padding: 2px 3px;
+  margin-left: 3px;
+  margin-top: 9px;
+}
+
+.profile {
+  position: relative;
+}
+
+.profile::before {
+  content: "";
+  background-color: #f6f4f0;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  left: 0px;
+  top: 0px;
+}
+
+.profile h3 {
+  display: inline-block;
+  position: absolute;
+  top: 36px;
+  left: 120px;
+  font-size: 30px;
+}
+
+.editp {
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 5px;
+  margin: 1px 35px;
+  border: 1.5px solid black;
+  color: black;
+  padding: 4px 7px;
+  position: absolute;
+  left: 121px;
+  top: 71px;
+}
+
+.editp:hover {
+  color: white;
+  background-color: black;
+}
+
+.follower,
+.following {
+  color: black;
+  border: 1.5px solid black;
+  text-decoration: none;
+  border-radius: 5px;
+  padding: 2px 9px;
+  margin-left: 5px;
+}
+
+.bio {
+  display: block;
+  font-size: 20px;
+  padding: 5px 5px;
+}
+
+.follower:hover,
+.following:hover {
+  color: white;
+  background-color: black;
+}
+
+.readlist {
+  text-decoration: none;
+  color: grey;
+  display: inline-block;
+  padding: 9px 5px;
+}
+
+.readlist:hover {
+  color: black;
+}

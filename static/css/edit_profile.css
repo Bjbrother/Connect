@@ -1,0 +1,103 @@
+.edit-group {
+  padding: 12px 23px;
+  background-color: #efeeec91;
+}
+
+.write-post {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+  width: 27%;
+  margin: 3px auto;
+  border: 2px solid #c6d1e42b;
+  border-radius: 20px;
+  background-color: #648a8363;
+}
+
+.forgot {
+  display: block;
+  width: 27%;
+  height: 53%;
+  margin: auto;
+  margin-top: 176px;
+}
+.edit-group input {
+  text-align: center;
+  display: block;
+  padding: 6px;
+  width: 330px;
+  font-size: 20px;
+  border: 2px solid black;
+  border-radius: 5px;
+  margin: 7px;
+}
+.write-post input,
+.write-post textarea {
+  text-align: center;
+  display: block;
+  padding: 6px;
+  width: 330px;
+  font-size: 20px;
+  border: 2px solid black;
+  border-radius: 5px;
+  margin: 10px;
+}
+
+.forgot input {
+  text-align: center;
+  display: block;
+  padding: 6px;
+  width: 330px;
+  font-size: 20px;
+  border: 2px solid black;
+  border-radius: 5px;
+  margin: 7px;
+}
+
+#btn {
+  padding: 7px 21px;
+  width: 150px;
+  border: 1px solid black;
+  display: inline-block;
+  cursor: pointer;
+}
+
+#btn1 {
+  padding: 7px 21px;
+  width: 150px;
+  border: 1px solid black;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.edit-group a {
+  text-decoration: none;
+  border: 1px solid black;
+  padding: 7px 50px;
+  margin: 9px;
+  font-size: 20px;
+  border-radius: 5px;
+  background-color: rgb(239, 239, 239);
+  color: black;
+}
+
+#btn:hover {
+  color: white;
+  background-color: black;
+}
+
+#btn1:hover {
+  color: white;
+  background-color: black;
+}
+
+.edit-group a:hover {
+  color: white;
+  background-color: black;
+}
+
+.forgot input[type="submit"] {
+  margin-left: 110px;
+}

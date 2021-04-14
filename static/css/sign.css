@@ -1,0 +1,110 @@
+* {
+  outline: 0;
+}
+.sign-in {
+  display: flex;
+  justify-content: center;
+  background-color: #efeeec91;
+}
+
+.sign-in input {
+  text-align: center;
+  display: block;
+  padding: 6px;
+  width: 330px;
+  font-size: 20px;
+  border: 1px solid #ccaaaae3;
+  border-radius: 13px;
+  margin: 7px;
+}
+
+.sign-in input[type="checkbox"] {
+  display: inline-block;
+  margin: 14px 10px;
+  width: 16px;
+}
+
+.sign-in input[type="submit"] {
+  display: inline-block;
+  margin-top: 0px;
+  width: 112px;
+  height: 40px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.sign-in input[type="submit"]:hover {
+  color: white;
+  background-color: black;
+}
+
+.sign-in label {
+  display: inline-block;
+  margin: 11px 5px;
+  position: absolute;
+  left: 500px;
+}
+
+.sign-in a {
+  color: black;
+  text-decoration: none;
+  display: block;
+  margin-left: 5px;
+  padding: 3px 0px;
+}
+
+.sign-in a:hover {
+  color: grey;
+}
+
+#spec {
+  display: inline-block;
+  color: #493939;
+}
+
+span {
+  margin-left: 5px;
+}
+
+#btn {
+  padding: 7px 21px;
+  width: 150px;
+  border: 1px solid black;
+  display: inline-block;
+  cursor: pointer;
+}
+
+#signup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #efeeec91;
+}
+
+.alert {
+  padding: 9px;
+  background-color: #4160719c;
+  color: white;
+  margin-bottom: 0px;
+  display: none;
+}
+
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.closebtn:hover {
+  color: black;
+}
+
+
+#err{
+  color:red
+}

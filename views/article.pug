@@ -1,0 +1,85 @@
+doctype html
+head
+  link(rel='stylesheet' type='text/css' href='../static/css/style.css')
+  link(rel='stylesheet' type='text/css' href='../static/css/profile.css')
+  link(rel='stylesheet' type='text/css' href='../static/css/style.css')
+  link(rel='stylesheet' type='text/css' href='../static/css/posts.css')
+  script(type='text/javascript')
+
+  style.
+    .post-group {
+    border: 2px solid #cdd0de03;
+    background-color: #cecece33;
+    padding: 25px 25px;
+    margin: 23px 0px;
+    border-radius: 0px;
+    box-shadow: 2px 3px 7px 2px #888888;
+    }
+    .Name {
+    cursor: pointer;
+    font-size: 16px;
+    }
+    .btn {
+    padding: 6px 23px;
+    font-size: 15px;
+    width: 98px;
+    border: 1px solid #0a050561;
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 0px;
+    margin-top: 15px;
+    list-style:none;
+    text-decoration:none;
+    }
+  title
+nav#navbar
+  .logo
+    p C
+  ul
+    li.item
+      a(href='/home') Home
+    li.item
+      a(href='/about') About us
+    li.item
+      a(href='/article/write') Write
+    li.item
+      input(type='text' name='search' placeholder='Search Connect..')
+    li.item
+      a(href='/') Sign out
+#posts.posts
+  .post-group
+    .title #{article.heading}
+    hr
+    h6
+      span.Name #{article.author}
+      i in
+      strong.Name #{article.topic}
+    br
+    p
+      | Posted: #{article.timeElapsed}
+      span.time 
+    br
+    p.stories #{article.story}
+    //- if user
+    //-   a.btn#like(href='#',data-id=article._id) Like
+    - curent = article._id
+    - usr  = user
+    if flag
+      a.btn#bookmark(href='#',data-id=article._id,data-user=usr._id ) Bookmark
+    else 
+      a.btn#bookmarked(href='#',data-id1=article._id,data-user1=usr._id ) Bookmarked
+    if user.username == article.author
+        a.btn#update(href="/article/edit/"+article._id) Update
+        a.btn#delete(href="#",data-id=article._id) Delete
+    script 
+
+footer
+  p.center.foot
+    | Copyrights &copy; www.Connect.com All rights are reserved!
+
+
+script(type='text/javascript' src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js")
+script(type='text/javascript' src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js")
+script(type='text/javascript' src='../static/script/delete.js')
+script(type="text/javascript" src='../static/script/bookmark.js')
+

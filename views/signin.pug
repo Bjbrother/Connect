@@ -1,0 +1,29 @@
+doctype html
+head
+  title Sign in
+  link(rel='stylesheet' type='text/css' href='../static/css/sign.css')
+  link(rel='stylesheet' type='text/css' href='../static/css/style.css')
+nav#navbar
+  .logo
+    p C
+  ul
+    li.item
+      a(href='#') Contact us
+    li.item
+      a(href='/about') About us
+    li.item
+      input(type='text' name='search' placeholder='Search Connect..')
+#alertup1.alert
+  span.closebtn(onclick="this.parentElement.style.display='none';") &times;
+  label#errormsg1
+.sign-in
+  form(method='post' onsubmit='return validationin()')
+    input#user.form-group(type='text' name='username' placeholder='Username' autocomplete='off')
+    input#pass.form-group(type='password' name='password' placeholder='Password' autocomplete='off')
+    input(type='submit' name='' value='Sign in')
+    span No account? 
+    a#spec(href='/users/signup') Create one
+footer
+  p.center.foot
+    | Copyrights &copy; www.Connect.com All rights are reserved!
+script(type='text/javascript' src='../static/script/validate.js')
