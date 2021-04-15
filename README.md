@@ -7,7 +7,7 @@ In this website Any User Can see Articles of other users as well as his/her arti
 
 ### Quick Startup:
 
-to run server
-run app.js with this command ```npm run watch```
-Server will be running on **PORT 3200**
+to run server<br />
+run app.js with this command ```npm run watch```<br />
+Server will be running on **PORT 3200**<br />
 Now you are Good to Go...
